@@ -1,0 +1,118 @@
+/* =========================
+   GENERAL STYLES
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #333;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* =========================
+   BLOG LAYOUT (FLEXBOX)
+========================= */
+#blog {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+article {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  animation: fadeIn 1s ease-in;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+input:hover,
+textarea:hover {
+  border-color: #666;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #333;
+  background-color: #f5f5f5;
+  outline: none;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Phones */
+@media (max-width: 767px) {
+  #blog {
+    flex-direction: column;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #blog {
+    flex-direction: column;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  #blog {
+    flex-direction: row;
+  }
+}
